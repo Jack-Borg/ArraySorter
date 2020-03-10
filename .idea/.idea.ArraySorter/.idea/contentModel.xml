@@ -6,6 +6,7 @@
     <e p="C:\Users\GAIMZ\.Rider2019.3\system\resharper-host\local\Transient\ReSharperHost\v193\SolutionCaches\_ArraySorter.-1157140444.00" t="ExcludeRecursive" />
     <e p="C:\Users\GAIMZ\Software Dev\Algo\ArraySorter" t="IncludeFlat">
       <e p="ArraySorter" t="IncludeRecursive">
+        <e p="ArraySorter.cs" t="Include" />
         <e p="ArraySorter.csproj" t="IncludeRecursive" />
         <e p="bin" t="ExcludeRecursive" />
         <e p="obj" t="ExcludeRecursive">
@@ -15,9 +16,7 @@
             </e>
           </e>
         </e>
-        <e p="PriorityQueue.cs" t="Include" />
         <e p="Program.cs" t="Include" />
-        <e p="Util.cs" t="Include" />
       </e>
       <e p="ArraySorter.sln" t="IncludeFlat" />
       <e p="packages" t="ExcludeRecursive" />

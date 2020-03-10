@@ -7,38 +7,34 @@ namespace ArraySorter
     {
         static void Main(string[] args)
         {
-            String[] str = {"e", "b", "a", "y", "f", "g", "u"};
+            int[] ia = {5, 4, 8, 6, 4, 7, 3, 1};
+            ArraySorter<int> arr = new ArraySorter<int>(ia, 10);
 
-            ArraySorter<String> test = new ArraySorter<string>(str, str.Length);
-    
-            //String[] arr = ArraySorter<String>.Sort(str);
 
-            test.enqueue("bob");
-            
-            /*foreach (string s in arr)
+            Console.WriteLine("Enqueue of item");
+            arr.Enqueue(2);
+            foreach (int i in arr.items)
             {
-                Console.Write(s + " ");
-            }*/
-
-            Console.WriteLine();
-        }
-
-        //a b e f g u y
-    }
-
-    /*        private static bool Less(String s1, String s2)
-        {
-            char[] ca1 = s1.ToCharArray();
-            char[] ca2 = s2.ToCharArray();
-            int cycles = ca1.Length > ca2.Length ? ca2.Length : ca1.Length;
-            for (int i = 0; i < cycles; i++)
-            {
-                if (ca1[i] != ca2[i])
-                {
-                    return ca1[i] - 97 < ca2[i] - 97;
-                }
+                Console.Write(i + " ");
             }
+            Console.WriteLine("\n");
 
-            return s2.Length > s1.Length;
-        }*/
+            Console.WriteLine("Dequeued first item");
+            Console.WriteLine(arr.Dequeue() + "\n");
+
+            Console.WriteLine("Sorted Descending");
+            foreach (int i in arr.SortDescending())
+            {
+                Console.Write(i + " ");
+            }
+            Console.WriteLine("\n");
+
+            Console.WriteLine("Sorted with custom lambda");
+            foreach (int i in arr.Sort((x, y) => x > y))
+            {
+                Console.Write(i + " ");
+            }
+            Console.WriteLine("\n");
+        }
+    }
 }
